@@ -1,3 +1,3 @@
-var arr = [12, 34, 32, 89, 4];
+const a;
 
-console.log(Math.min(...arr))
+a = 1
