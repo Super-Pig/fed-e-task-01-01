@@ -1,3 +1,12 @@
-const a;
+var a = 10;
 
-a = 1
+var obj = {
+    a: 20,
+    fn() {
+        setTimeout(() => {
+            console.log(this.a);
+        })
+    }
+}
+
+obj.fn();
