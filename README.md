@@ -64,3 +64,15 @@ if (true) {
 抛出异常 `ReferenceError: Cannot access 'tmp' before initialization`
 
 解释：let 命令不存在变量提升，在 let 声明之前引用变量都会报 `ReferenceError`。在块级作用域内存在 `let` 命令，它所声明都变量就绑定在这个作用域。在 `if` 的块作用域内，tmp 在声明之前都不可用，在语法上叫做“暂时性死区”(temporal dead zone)
+
+# 3. 结合ES6新语法，用最简单的方式找出数组中的最小值?
+
+```
+var arr = [12, 34, 32, 89, 4];
+```
+
+## 答案:
+
+```
+console.log(Math.min(...arr))       //4
+```

@@ -1,6 +1,3 @@
-var tmp = 123;
+var arr = [12, 34, 32, 89, 4];
 
-if (true) {
-    console.log(tmp);
-    let tmp;
-}
+console.log(Math.min(...arr))
