@@ -180,3 +180,22 @@ promisify(() => {
     console.log(a + b + c);
 }, 10))
 ```
+
+# 10. 请简述 TypeScript 与 JavaScript 之间的关系？
+
+## 答:
+
+TypeScript 是 JavaScript 的超集，它可以编译成纯 JavaScript 执行。
+
+# 11. 请谈谈你所认为的 TypeScript 优缺点？
+
+## 答：
+
+TypeScript 基于 javascript 提供了一套类型系统，是一种静态类型，强类型的语言；
+
+在编译时检查类型错误；避免弱类型语言的类型检查的麻烦，以及运行时各种隐式类型转换导致的隐式bug；从语法层面对开发人员进行约束
+
+支持 class、泛型、接口、抽象类等特性，语法上更像 JAVA 和 C#, 在大型项目中可以结合面向对象的设计模式，对项目的扩展性和维护性很有好处
+
+缺点是它更像是 C# 和 JAVA 这样对语言，对于 JavaScript 而言，新增了很多特性和关键字，js开发者的学习成本稍微有点高
+
