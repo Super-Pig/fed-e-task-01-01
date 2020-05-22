@@ -138,3 +138,29 @@ JS 主线程在空闲时会从任务队列取出一个任务（宏任务），�
 
 宏任务包含 setTimeout, setInterval, I/O, setImmediate
 微任务包含 Promise, MutaionObserver, Process.nextTick
+
+# 9. 将下面异步代码使用 Promise 改进?
+
+## 答:
+
+```
+let a, b, c;
+
+const promisify = (callback, timeout) => new Promise(resolve => {
+    setTimeout(() => {
+        callback();
+
+        resolve();
+    }, timeout);
+})
+
+b = promisify(() => {
+    a = 'hello'
+}, 10000).then(() => promisify(() => {
+    b = 'lagou'
+}, 10)).then(() => promisify(() => {
+    c = 'I ❤️ U';
+
+    console.log(a + b + c);
+}, 10))
+```
