@@ -141,6 +141,22 @@ JS 主线程在空闲时会从任务队列取出一个任务（宏任务），�
 
 # 9. 将下面异步代码使用 Promise 改进?
 
+```
+setTimeout(function () {
+    var a = 'hello';
+
+    setTimeout(function () {
+        var b = 'lagou';
+
+        setTimeout(function () {
+            var c = 'I ❤️ U';
+
+            console.log(a + b + c);
+        }, 10)
+    }, 10)
+}, 10);
+```
+
 ## 答:
 
 ```
@@ -156,7 +172,7 @@ const promisify = (callback, timeout) => new Promise(resolve => {
 
 b = promisify(() => {
     a = 'hello'
-}, 10000).then(() => promisify(() => {
+}, 10).then(() => promisify(() => {
     b = 'lagou'
 }, 10)).then(() => promisify(() => {
     c = 'I ❤️ U';
