@@ -170,7 +170,7 @@ const promisify = (callback, timeout) => new Promise(resolve => {
     }, timeout);
 })
 
-b = promisify(() => {
+promisify(() => {
     a = 'hello'
 }, 10).then(() => promisify(() => {
     b = 'lagou'
